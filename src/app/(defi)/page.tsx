@@ -23,6 +23,10 @@ const Claim = dynamic(() => import('@/components/claim'), {
   ssr: false,
   loading: () => <ClaimLoading />
 });
+const Migrate = dynamic(() => import('@/components/migrate'), {
+  ssr: false,
+  loading: () => <ClaimLoading />
+})
 
 const transactionActiveClassName = 'opacity-50 cursor-default pointer-events-none';
 const defaultValue = menuItems[0]?.key;
@@ -89,6 +93,9 @@ const DefiTabs = () => {
                     )}
                     {value === 'claim' && (
                       <Claim onTransactionActiveChange={setIsTransactionActive} />
+                    )}
+                    {value === 'migrate' && (
+                      <Migrate onTransactionActiveChange={setIsTransactionActive} />
                     )}
                   </motion.div>
                 </TabsContent>

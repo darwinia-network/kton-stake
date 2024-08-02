@@ -10,5 +10,9 @@ export const menuItems = [
   {
     key: 'claim',
     label: 'Claim'
+  },
+  {
+    key: 'migrate',
+    label: 'Migrate'
   }
 ] as const;

@@ -25,3 +25,8 @@
     opacity: 0.3;
   }
 }
+
+.absolute-popover-container > [data-radix-popper-content-wrapper] {
+  position: absolute !important;
+  pointer-events: all;
+}

@@ -1,26 +1,24 @@
 'use client';
-import { useAccount } from 'wagmi';
-import { parseEther } from 'viem';
 import { MutableRefObject, useCallback, useEffect, useRef, useState } from 'react';
+import { parseEther } from 'viem';
+import { useAccount } from 'wagmi';
 
-import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
-import { useChain } from '@/hooks/useChain';
-import { useUnStake } from '@/hooks/useUnStake';
-import { usePoolAmount } from '@/hooks/usePoolAmount';
 import { abi } from '@/config/abi/KTONStakingRewards';
 import { useBigIntContractQuery } from '@/hooks/useBigIntContractQuery';
+import { useChain } from '@/hooks/useChain';
+import { usePoolAmount } from '@/hooks/usePoolAmount';
+import { useUnStake } from '@/hooks/useUnStake';
 import { useUnStakeState } from '@/hooks/useUnstakeState';
+import { cn } from '@/lib/utils';
 
 import AmountInputForm from './amount-input-form';
 import KTONBalance from './kton-balance';
 
+import { ActionProps } from '@/types/action';
 import type { Form, SubmitData } from './amount-input-form';
 
-type UnStakeProps = {
-  onTransactionActiveChange?: (isTransaction: boolean) => void;
-};
-const UnStake = ({ onTransactionActiveChange }: UnStakeProps) => {
+const UnStake = ({ onTransactionActiveChange }: ActionProps) => {
   const formRef: MutableRefObject<Form | null> = useRef(null);
   const [amount, setAmount] = useState<bigint>(0n);
   const { address, isConnected } = useAccount();

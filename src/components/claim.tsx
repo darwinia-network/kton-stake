@@ -11,11 +11,9 @@ import { useClaim } from '@/hooks/useClaim';
 import { abi } from '@/config/abi/KTONStakingRewards';
 import { useBigIntContractQuery } from '@/hooks/useBigIntContractQuery';
 import { useClaimState } from '@/hooks/useClaimState';
+import { ActionProps } from '@/types/action';
 
-type ClaimProps = {
-  onTransactionActiveChange?: (isTransaction: boolean) => void;
-};
-const Claim = ({ onTransactionActiveChange }: ClaimProps) => {
+const Claim = ({ onTransactionActiveChange }: ActionProps) => {
   const { address, isConnected } = useAccount();
   const { isSupportedChainId, activeChain } = useChain();
 
