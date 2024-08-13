@@ -12,7 +12,7 @@ import ClaimLoading from '@/components/claim-loading';
 import { cn } from '@/lib/utils';
 import { useChain } from '@/hooks/useChain';
 import { ChainId } from '@/types/chains';
-import CenteredPopover from '@/components/ui/popover';
+import MigrationPopover from '@/components/migration-popover';
 
 // TODO: add chain id into array when rolling out V2 in the chain
 export const v2ChainId: ChainId[] = [ChainId.KOI]
@@ -117,7 +117,7 @@ const DefiTabs = () => {
           </Suspense>
         </AnimatePresence>
       </Tabs>
-      {isV2 && <CenteredPopover />}
+      {isV2 && <MigrationPopover />}
     </>
   );
 };
