@@ -1,4 +1,4 @@
-export const menuItems = [
+export const menuItemsV1 = [
   {
     key: 'stake',
     label: 'Stake'
@@ -10,7 +10,10 @@ export const menuItems = [
   {
     key: 'claim',
     label: 'Claim'
-  },
+  }
+] as const;
+
+export const menuItemsV2 = [
   {
     key: 'migrate',
     label: 'Migrate'

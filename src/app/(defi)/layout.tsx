@@ -4,8 +4,6 @@ import { PoolProvider } from '@/providers/pool-provider';
 import KTONPoolLoading from '@/components/kton-pool-loading';
 
 import type { PropsWithChildren } from 'react';
-import CenteredPopover from '@/components/ui/popover';
-
 
 const KTONPool = dynamic(() => import('@/components/kton-pool'), {
   ssr: false,
@@ -21,22 +19,6 @@ const DefiLayout = ({ children }: PropsWithChildren) => {
           {children}
         </div>
       </PoolProvider>
-      <CenteredPopover/>
-      {/* <div className="absolute-popover-container"
-      style={{
-        height: '300px',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        position: 'absolute',
-        left: '20%',
-        top: '20%',
-        minWidth: '400px',
-        backgroundColor: 'rebeccapurple'
-      }}
-    >
-       test
-      </div> */}
     </div>
   );
 };
