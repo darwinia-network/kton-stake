@@ -13,12 +13,12 @@ import { useTokenAllowanceAndApprove } from '@/hooks/useTokenAllowanceAndApprove
 import { useStake } from '@/hooks/useStake';
 import { usePoolAmount } from '@/hooks/usePoolAmount';
 import { useStakeState } from '@/hooks/useStakeState';
+import { ActionProps } from '@/types/action';
 
 import AmountInputForm from './amount-input-form';
 import KTONBalance from './kton-balance';
 
 import type { Form, SubmitData } from './amount-input-form';
-import { ActionProps } from '@/types/action';
 
 const Stake = ({ onTransactionActiveChange }: ActionProps) => {
   const formRef: MutableRefObject<Form | null> = useRef(null);

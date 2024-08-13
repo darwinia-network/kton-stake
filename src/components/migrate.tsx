@@ -1,16 +1,18 @@
+import { useAccount } from "wagmi";
+import { useEffect } from "react";
+
 import { useBigIntContractQuery } from "@/hooks/useBigIntContractQuery";
 import { useChain } from "@/hooks/useChain";
 import { ActionProps } from "@/types/action";
-import { useAccount } from "wagmi";
 import { abi } from '@/config/abi/KTONStakingRewards';
 import { usePoolAmount } from "@/hooks/usePoolAmount";
 import { useMigrate } from "@/hooks/useMigrate";
 import { useMigrateState } from "@/hooks/useMigrateState";
 import { formatNumericValue } from "@/utils";
-import { useEffect } from "react";
-import Loading from "./loading";
 import { Button } from '@/components/ui/button';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
+
+import Loading from "./loading";
 
 const newPoolButtonText = "Stake in new pool";
 const newPoolUrl = "https://kton-staking-v2.darwinia.network"

@@ -11,11 +11,8 @@ import KTONActionLoading from '@/components/kton-action-loading';
 import ClaimLoading from '@/components/claim-loading';
 import { cn } from '@/lib/utils';
 import { useChain } from '@/hooks/useChain';
-import { ChainId } from '@/types/chains';
 import MigrationPopover from '@/components/migration-popover';
-
-// TODO: add chain id into array when rolling out V2 in the chain
-export const v2ChainId: ChainId[] = [ChainId.KOI]
+import { v2ChainId } from '@/config/v2migrate';
 
 const Stake = dynamic(() => import('@/components/stake'), {
   ssr: false,

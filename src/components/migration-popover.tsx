@@ -1,7 +1,9 @@
 "use client";
 import { useState } from 'react';
-import { Button } from './ui/button';
+
 import { cn } from '@/lib/utils';
+
+import { Button } from './ui/button';
 
 const title = "We are migrating";
 const instruction = "Please migrate to new KTON Pool and get your gKTON reward. To migrate, please follow steps below:"

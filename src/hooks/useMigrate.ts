@@ -1,15 +1,16 @@
 import { useWriteContract } from "wagmi";
 import { useCallback, useRef } from "react";
 import { parseEther, WriteContractReturnType } from "viem";
+import { toast } from "sonner";
+
+import { abi } from "@/config/abi/KTONStakingRewards";
 
 import { getOperationStatus, useAppState } from "./useAppState";
 import { useChain } from "./useChain";
 import { useLatestCallback } from "./useLatestCallback";
 import { ErrorType, SuccessType, useTransactionStatus, UseTransactionStatusProps } from "./useTransactionStatus";
-import { abi } from "@/config/abi/KTONStakingRewards";
 import { useWalletInteractionToast } from "./useWalletInteractionToast";
-import { useInstructionToast } from "./useInstructionToast";
-import { toast } from "sonner";
+
 
 interface UseMigrateProps extends Pick<UseTransactionStatusProps, 'onError' | 'onSuccess'> {
     ownerAddress: `0x${string}`;
