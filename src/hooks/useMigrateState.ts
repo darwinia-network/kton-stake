@@ -3,7 +3,7 @@ import { useMemo } from "react";
 export type UseMigrateStateType = {
   isConnected: boolean;
   isSupportedChainId: boolean;
-  isMigrating: boolean; //isMigrating
+  isMigrating: boolean; 
   isTransactionConfirming: boolean;
   isLoadingOrRefetching: boolean;
   value: bigint;
