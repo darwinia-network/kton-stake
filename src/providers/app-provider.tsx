@@ -5,7 +5,7 @@ import { useAccount } from 'wagmi';
 
 import { ChainId } from '@/types/chains';
 
-export type OperationStatusType = 'stake' | 'unstake' | 'claim' | 'approve';
+export type OperationStatusType = 'stake' | 'unstake' | 'claim' | 'approve' | 'migrate';
 
 export type AppProviderType = {
   operationStatusMap: Record<string, number>;
