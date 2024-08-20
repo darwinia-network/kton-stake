@@ -16,7 +16,7 @@ export const crab: ChainConfig = {
   },
   blockExplorers: {
     default: {
-      name: 'CrabExplorer',
+      name: 'Crab Scan',
       url: 'https://crab-scan.darwinia.network/'
     }
   },
